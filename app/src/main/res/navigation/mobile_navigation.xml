@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/item1Fragment">
+
+    <fragment
+        android:id="@+id/item1Fragment"
+        android:name="com.omurgun.testHamburger.Item1Fragment"
+        android:label="fragment_item1"
+        tools:layout="@layout/fragment_item1" >
+        <action
+            android:id="@+id/action_item1Fragment_to_item2Fragment"
+            app:destination="@id/item2Fragment" />
+        <action
+            android:id="@+id/action_item1Fragment_to_item3Fragment"
+            app:destination="@id/item3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item2Fragment"
+        android:name="com.omurgun.testHamburger.Item2Fragment"
+        android:label="fragment_item2"
+        tools:layout="@layout/fragment_item2" >
+        <action
+            android:id="@+id/action_item2Fragment_to_item1Fragment"
+            app:destination="@id/item1Fragment" />
+        <action
+            android:id="@+id/action_item2Fragment_to_item3Fragment"
+            app:destination="@id/item3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item3Fragment"
+        android:name="com.omurgun.testHamburger.Item3Fragment"
+        android:label="fragment_item3"
+        tools:layout="@layout/fragment_item3" >
+        <action
+            android:id="@+id/action_item3Fragment_to_item1Fragment"
+            app:destination="@id/item1Fragment" />
+        <action
+            android:id="@+id/action_item3Fragment_to_item2Fragment"
+            app:destination="@id/item2Fragment" />
+    </fragment>
+</navigation>
